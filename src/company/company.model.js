@@ -34,10 +34,14 @@ const companySchema = Schema({
     },
     yearFoundation:{
         type: Date,
-        required: true
+        required: true,
+        set: (value) => {
+            return new Date(value.getFullYear(), value.getMonth(), value.getDate());
+        }
     },
     category:{
-        
+        type: String,
+        required: true,
     },
     path:{
         type: Number
