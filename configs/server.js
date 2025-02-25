@@ -8,6 +8,7 @@ import { dbConnection } from "./mongo.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import authRoutes from "../src/auth/auth.router.js"
 import companyRoutes from "../src/company/company.router.js"
+import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))

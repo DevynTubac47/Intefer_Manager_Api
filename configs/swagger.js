@@ -5,9 +5,9 @@ const options ={
     swaggerDefinition:{
         openapi:"3.0.0",
         info:{
-            title: "Opinion Manager API",
+            title: "Interfer Manager API",
             version: "1.0.0",
-            description: "API para un sistema de gestión de adopciones de mascotas",
+            description: "Esta API permitirá a las empresas registrar sus datos, incluyendo información crucial como su nivel de impacto, años de trayectoria y categoría empresarial. Además, se busca que esta API genere automáticamente un reporte en formato Excel.",
             contact:{
                 name: "Devyn Tubac",
                 email: "dtubac-2020247@kinal.edu.gt"

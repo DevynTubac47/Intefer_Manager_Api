@@ -1,7 +1,6 @@
 import { Router } from "express";
 import { generateReport, getCompanies, getCompanyByCategory, getCompanyByOrder, getCompanyByPath, registerCompany, updateCompany } from "./company.controller.js";
 import { getCompanyByCategoryValidator, getCompanyByPathValidator, registerCompanyValidator, updateCompanyValidator } from "../middlewares/company-validators.js";
-import { authenticateToken } from "../middlewares/authenticateToken.js";
 
 const router = Router();
 
@@ -27,7 +26,7 @@ const router = Router();
  *       400:
  *         description: Error en la solicitud.
  */
-router.post("/registerCompany", authenticateToken, registerCompanyValidator, registerCompany);
+router.post("/registerCompany", registerCompanyValidator, registerCompany);
 
 /**
  * @swagger
@@ -156,7 +155,7 @@ router.get("/companies/order", getCompanyByOrder);
  *       400:
  *         description: Error en la solicitud.
  */
-router.put("/updateCompany/:id", authenticateToken, updateCompanyValidator, updateCompany);
+router.put("/updateCompany/:id", updateCompanyValidator, updateCompany);
 
 /**
  * @swagger
