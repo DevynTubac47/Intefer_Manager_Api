@@ -1,4 +1,11 @@
+import ExcelJS from "exceljs";
+import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 import Company from "./company.model.js";
+import { fstat } from "fs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const registerCompany = async (req, res) =>{
     try{
@@ -157,6 +164,64 @@ export const updateCompany = async (req, res) =>{
         return res.status(500).json({ 
             success: false, 
             messge: "Error updating company", 
+            error: error.message
+        })
+    }
+}
+
+export const generateReport = async (req, res) =>{
+    try{
+        const companies = await Company.find();
+
+        if(companies.length === 0){
+            return res.status(404).json({
+                success: false,
+                message: 'There are no companies to generate the report'
+            })
+        }
+
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Companies Report');
+
+        worksheet.columns = [
+            { header: 'Name', key: 'nameCompany', width: 25 },
+            { header: 'Description', key: 'descriptionCompany', width: 50 },
+            { header: 'Address', key: 'addressCompany', width: 30 },
+            { header: 'Phone', key: 'phoneCompany', width: 15 },
+            { header: 'Email', key: 'emailCompany', width: 30 },
+            { header: 'Impact Level', key: 'impactLevel', width: 15 },
+            { header: 'Year Foundation', key: 'yearFoundation', width: 15 },
+            { header: 'Category', key: 'category', width: 20 },
+            { header: 'Trayectory', key: 'trayectory', width: 15 },
+        ]
+
+        companies.forEach(company => {
+            worksheet.addRow({
+                nameCompany: company.nameCompany,
+                descriptionCompany: company.descriptionCompany,
+                addressCompany: company.addressCompany,
+                phoneCompany: company.phoneCompany,
+                emailCompany: company.emailCompany,
+                impactLevel: company.impactLevel,
+                yearFoundation: company.yearFoundation,
+                category: company.category,
+                trayectory: company.trayectory
+            })
+        })
+
+        const filePath = path.join(__dirname, `../../public/reports/companies-report-${Date.now()}.xlsx`);
+
+        await workbook.xlsx.writeFile(filePath);
+
+        return res.status(200).json({
+            success: true,
+            message: 'Report generated successfully',
+            report: filePath
+        })
+    }catch(error){
+        return res.status(500).json({ 
+            success: false, 
+            messge: "Error generating report", 
             error: error.message
         })
     }
