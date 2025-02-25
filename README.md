@@ -3,7 +3,6 @@ Esta API permitirá a las empresas registrar sus datos, incluyendo información 
 
 ¡Claro! Aquí tienes el README adaptado a tu proyecto:
 
-```markdown
 Sistema de gestión de empresas e informes. Permite a los administradores registrar empresas, gestionarlas, y generar reportes en formatos descargables.
 
 ## 📌 Características principales
