@@ -43,7 +43,7 @@ const companySchema = Schema({
         type: String,
         required: true,
     },
-    path:{
+    trayectory:{
         type: Number
     }
 },{

@@ -23,3 +23,11 @@ export const getCompanyByCategoryValidator = [
     handleErrors
 ]
 
+export const updateCompanyValidator = [
+    validateJWT,
+    param("id").isMongoId().withMessage("Invalid ID"),
+    body("nameCompany").custom(companyExist),
+    validarCampos,
+    handleErrors
+]
+
