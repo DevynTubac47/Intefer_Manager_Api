@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "032c796c-24a6-4722-9854-dec91351fe7f",
+		"name": "Interfer Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37640614"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login Admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Dev_vyn\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Register Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA0MzYwMTIsImV4cCI6MTc0MDQzOTYxMn0.li8qOfVx6ABrsb9TNUufHNFz6GJDjOv1F3BegIRu6PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCompany\":\"Pepsi Cola\",\r\n    \"descriptionCompany\":\"Kinal el Trabajo bien hecho\",\r\n    \"addressCompany\":\"6Avenida Zona 7\",\r\n    \"phoneCompany\":\"12345279\",\r\n    \"emailCompany\":\"pepsi@kinal.edu.gt\",\r\n    \"impactLevel\":\"HIGH\",\r\n    \"yearFoundation\":\"2020-01-15\",\r\n    \"category\":\"Tecnología\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/registerCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"registerCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Companies",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Companies by Trayectory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/companiesByTrayectory/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"companiesByTrayectory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Companies by Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/companiesByCategory/Tecnología",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"companiesByCategory",
+								"Tecnología"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Companies by Order",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/companies/order?order=Z-A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"companies",
+								"order"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "Z-A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA0NDIxMjEsImV4cCI6MTc0MDQ0NTcyMX0.4KkrKauTMoFKWGM2Jyv4-MZmbrVhV0wxurd_PdvnBTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCompany\":\"Coca Cola Lite\",\r\n    \"descriptionCompany\":\"Kinal rabajo bien hecho\",\r\n    \"addressCompany\":\"s Zona 7\",\r\n    \"phoneCompany\":\"098765432\",\r\n    \"emailCompany\":\"pepsiLite@kinal.edu.gt\",\r\n    \"impactLevel\":\"LOW\",\r\n    \"yearFoundation\":\"2019-01-15\",\r\n    \"category\":\"Tecnología\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/updateCompany/67bced2fe5c64024c300c214",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"updateCompany",
+								"67bced2fe5c64024c300c214"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generated Report",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/interferManager/v1/company/companies/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"interferManager",
+								"v1",
+								"company",
+								"companies",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

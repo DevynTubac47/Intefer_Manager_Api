@@ -21,7 +21,7 @@ const middlewares = (app) => {
 const routes = (app) =>{
     app.use("/interferManager/v1/auth",authRoutes)
     app.use("/interferManager/v1/company", companyRoutes)
-
+    app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{
