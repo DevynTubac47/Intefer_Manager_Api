@@ -17,6 +17,16 @@ Sistema de gestión de empresas e informes. Permite a los administradores regist
 - MongoDB (en local o en la nube).
 - Postman (para probar las rutas, opcional).
 
+## 🔹 **Usuario Administrador por Defecto**
+
+```json
+  "username": "Dev_vyn",
+  "email": "devGomez@gmail.com",
+  "password": "123456789",
+  "role": "ADMIN_ROLE"
+```
+
+
 ## 🚀 Instalación y ejecución
 
 1. Clona el repositorio:
@@ -144,4 +154,4 @@ Sistema de gestión de empresas e informes. Permite a los administradores regist
 - El sistema incluye autenticación basada en JWT.
 - Los endpoints de empresa requieren autenticación con token de administrador para funciones de creación y actualización.
 - El archivo de reporte se genera automáticamente como un archivo Excel.
-```
+
