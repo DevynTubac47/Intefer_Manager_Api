@@ -58,9 +58,9 @@ export const getCompanies = async (req, res) =>{
 
 export const getCompanyByPath = async (req, res) =>{
     try{
-        const { path } = req.params;
+        const { trayectory } = req.params;
 
-        const company = await Company.find({path});
+        const company = await Company.find({trayectory: trayectory});
         if(!company){
             return res.status(404).json({
                 success: false,
@@ -137,18 +137,25 @@ export const updateCompany = async (req, res) =>{
         const { id } = req.params;
         const { yearFoundation, ...data} = req.body;
         
-        const isoDate = new Date(yearFoundation);
-        if (isNaN(isoDate.getTime())) {
-            return res.status(400).json({
-              success: false,
-              msg: "Fecha inválida",
-            });
+        let updateData = { ...data };
+
+        if(yearFoundation){
+            const isoDate = new Date(yearFoundation);
+            if (isNaN(isoDate.getTime())) {
+                return res.status(400).json({
+                success: false,
+                msg: "Fecha inválida",
+                });
+            }
+
+            const currentDate = new Date();
+            const trayectoria = currentDate.getFullYear() - isoDate.getFullYear();
+
+            updateData.yearFoundation = isoDate;
+            updateData.trayectory = trayectoria;
         }
 
-        const currentDate = new Date();
-        const trayectoria = currentDate.getFullYear() - isoDate.getFullYear();
-
-        const company = await Company.findByIdAndUpdate(id, {...data, yearFoundation: isoDate, trayectory: trayectoria }, {new: true});
+        const company = await Company.findByIdAndUpdate(id, updateData, {new: true});
         if(!company){
             return res.status(404).json({
                 success: false,
@@ -194,6 +201,20 @@ export const generateReport = async (req, res) =>{
             { header: 'Category', key: 'category', width: 20 },
             { header: 'Trayectory', key: 'trayectory', width: 15 },
         ]
+
+        worksheet.getRow(1).eachCell((cell) => {
+            cell.font = { 
+                bold: true, 
+                color: { argb: 'FFFFFF' },
+                size: 12,
+            }
+            cell.fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: '1D16E5' }
+            }
+            cell.alignment = { vertical: 'middle', horizontal: 'center' };
+        })
 
         companies.forEach(company => {
             worksheet.addRow({

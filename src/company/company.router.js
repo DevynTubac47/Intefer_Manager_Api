@@ -75,7 +75,7 @@ router.get("/companies", getCompanies);
  *       400:
  *         description: Error en la solicitud.
  */
-router.get("/companiesByTrayectory/:path", getCompanyByPathValidator, getCompanyByPath);
+router.get("/companiesByTrayectory/:trayectory", getCompanyByPathValidator, getCompanyByPath);
 
 /**
  * @swagger

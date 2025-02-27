@@ -12,7 +12,7 @@ export const registerCompanyValidator = [
 ]
 
 export const getCompanyByPathValidator = [
-    param("path").isNumeric().withMessage("Trajectory must be a number"),
+    param("trayectory").isNumeric().withMessage("Trajectory must be a number"),
     validarCampos,
     handleErrors
 ]

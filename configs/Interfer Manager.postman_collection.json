@@ -56,7 +56,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA0MzYwMTIsImV4cCI6MTc0MDQzOTYxMn0.li8qOfVx6ABrsb9TNUufHNFz6GJDjOv1F3BegIRu6PE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA2OTMxNzUsImV4cCI6MTc0MDY5Njc3NX0.26DPYA623VuvzQll5cmEjsKcYXptdq86IZ2g8K-5Vb4",
 									"type": "string"
 								}
 							]
@@ -65,7 +65,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameCompany\":\"Pepsi Cola\",\r\n    \"descriptionCompany\":\"Kinal el Trabajo bien hecho\",\r\n    \"addressCompany\":\"6Avenida Zona 7\",\r\n    \"phoneCompany\":\"12345279\",\r\n    \"emailCompany\":\"pepsi@kinal.edu.gt\",\r\n    \"impactLevel\":\"HIGH\",\r\n    \"yearFoundation\":\"2020-01-15\",\r\n    \"category\":\"Tecnología\"\r\n}",
+							"raw": "{\r\n    \"nameCompany\":\"Pollo Campero\",\r\n    \"descriptionCompany\":\"Empresa de comida rapida\",\r\n    \"addressCompany\":\"6 Avenida Zona 1\",\r\n    \"phoneCompany\":\"12345221\",\r\n    \"emailCompany\":\"campero@gmail.edu.gt\",\r\n    \"impactLevel\":\"HIGH\",\r\n    \"yearFoundation\":\"1971-01-15\",\r\n    \"category\":\"Comida Rapida\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -123,7 +123,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3001/interferManager/v1/company/companiesByTrayectory/2",
+							"raw": "http://localhost:3001/interferManager/v1/company/companiesByTrayectory/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -134,7 +134,7 @@
 								"v1",
 								"company",
 								"companiesByTrayectory",
-								"2"
+								"5"
 							]
 						}
 					},
@@ -206,7 +206,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA0NDIxMjEsImV4cCI6MTc0MDQ0NTcyMX0.4KkrKauTMoFKWGM2Jyv4-MZmbrVhV0wxurd_PdvnBTY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JjZTVkOTk2ZTlkOTk2OGQ5MjY0YTYiLCJpYXQiOjE3NDA2OTM2NDEsImV4cCI6MTc0MDY5NzI0MX0.X_wPmgsd3vBSKgQmRU-qOPrLtSBEBqlMg91l9R41c-I",
 									"type": "string"
 								}
 							]
@@ -215,7 +215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameCompany\":\"Coca Cola Lite\",\r\n    \"descriptionCompany\":\"Kinal rabajo bien hecho\",\r\n    \"addressCompany\":\"s Zona 7\",\r\n    \"phoneCompany\":\"098765432\",\r\n    \"emailCompany\":\"pepsiLite@kinal.edu.gt\",\r\n    \"impactLevel\":\"LOW\",\r\n    \"yearFoundation\":\"2019-01-15\",\r\n    \"category\":\"Tecnología\"\r\n}",
+							"raw": "{\r\n    \"addressCompany\":\"10 Avenida Zona 2\",\r\n    \"phoneCompany\":\"17770000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
