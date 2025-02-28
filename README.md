@@ -20,8 +20,8 @@ Sistema de gestión de empresas e informes. Permite a los administradores regist
 ## 🔹 **Usuario Administrador por Defecto**
 
 ```json
-  "username": "Dev_vyn",
-  "email": "devGomez@gmail.com",
+  "username": "Admin",
+  "email": "admin@gmail.com",
   "password": "123456789",
   "role": "ADMIN_ROLE"
 ```
