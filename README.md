@@ -1,10 +1,6 @@
 # Intefer_Manager_Api
 Esta API permitirá a las empresas registrar sus datos, incluyendo información crucial como su nivel de impacto, años de trayectoria y categoría empresarial. Además, se busca que esta API genere automáticamente un reporte en formato Excel.
 
-¡Claro! Aquí tienes el README adaptado a tu proyecto:
-
-Sistema de gestión de empresas e informes. Permite a los administradores registrar empresas, gestionarlas, y generar reportes en formatos descargables.
-
 ## 📌 Características principales
 
 - Autenticación de usuarios (login con JWT).
