@@ -6,8 +6,8 @@ export const addAdminDefault = async() => {
     const admin = await User.findOne({ role: "ADMIN_ROLE"})
     if(!admin) {
         await User.create({
-            username: "Dev_vyn",
-            email: "devGomez@gmail.com",
+            username: "Admin",
+            email: "admin@gmail.com",
             password: await hash("123456789"),
             role: "ADMIN_ROLE",
         })

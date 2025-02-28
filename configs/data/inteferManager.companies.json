@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "67c1bd33ce333ff01599f019"
+  },
+  "nameCompany": "Pollo Campero",
+  "descriptionCompany": "Empresa de comida rapida",
+  "addressCompany": "6 Avenida Zona 1",
+  "phoneCompany": "12345221",
+  "emailCompany": "campero@gmail.edu.gt",
+  "impactLevel": "HIGH",
+  "yearFoundation": {
+    "$date": "1971-01-14T06:00:00.000Z"
+  },
+  "category": "Comida Rapida",
+  "trayectory": 54,
+  "createdAt": {
+    "$date": "2025-02-28T13:42:11.761Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T13:42:11.761Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1ca70ce333ff01599f02d"
+  },
+  "nameCompany": "Tigo Guatemala",
+  "descriptionCompany": "Proveedor líder de servicios de telecomunicaciones en Guatemala, ofreciendo planes de Internet de alta velocidad para hogares y empresas.",
+  "addressCompany": "Ciudad de Guatemala, Guatemala",
+  "phoneCompany": "24114400",
+  "emailCompany": "atencioncliente@tigo.com.gt",
+  "impactLevel": "HIGH",
+  "yearFoundation": {
+    "$date": "2003-12-31T06:00:00.000Z"
+  },
+  "category": "Telecomunicaciones",
+  "trayectory": 22,
+  "createdAt": {
+    "$date": "2025-02-28T14:38:40.575Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:38:40.575Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1caabce333ff01599f031"
+  },
+  "nameCompany": "Claro Guatemala",
+  "descriptionCompany": "Proveedor de servicios de Internet, televisión por cable y telefonía móvil en Guatemala, con diversas opciones de planes para consumidores y empresas.",
+  "addressCompany": "Ciudad de Guatemala, Guatemala",
+  "phoneCompany": "22084488",
+  "emailCompany": "servicioalcliente@claro.com.gt",
+  "impactLevel": "HIGH",
+  "yearFoundation": {
+    "$date": "2004-12-31T06:00:00.000Z"
+  },
+  "category": "Telecomunicaciones",
+  "trayectory": 21,
+  "createdAt": {
+    "$date": "2025-02-28T14:39:39.223Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:39:39.223Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cb0ece333ff01599f035"
+  },
+  "nameCompany": "La Curacao",
+  "descriptionCompany": "Red de tiendas guatemalteca especializada en productos electrónicos, electrodomésticos, muebles y tecnología.",
+  "addressCompany": "Ciudad de Guatemala, Guatemala",
+  "phoneCompany": "24104411",
+  "emailCompany": "atencion@lcuracao.com.gt",
+  "impactLevel": "MEDIUM",
+  "yearFoundation": {
+    "$date": "2006-12-31T06:00:00.000Z"
+  },
+  "category": "Comercialización",
+  "trayectory": 19,
+  "createdAt": {
+    "$date": "2025-02-28T14:41:18.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:41:18.804Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cb48ce333ff01599f03d"
+  },
+  "nameCompany": "Panadería San Martín",
+  "descriptionCompany": "Famosa cadena guatemalteca de panaderías y restaurantes, especializada en productos de panadería artesanal, repostería y comida gourmet.",
+  "addressCompany": "Ciudad de Guatemala, Guatemala",
+  "phoneCompany": "24136020",
+  "emailCompany": "contacto@sanmartin.com.gt",
+  "impactLevel": "HIGH",
+  "yearFoundation": {
+    "$date": "2006-12-31T06:00:00.000Z"
+  },
+  "category": "Alimentos y Bebidas",
+  "trayectory": 19,
+  "createdAt": {
+    "$date": "2025-02-28T14:42:16.406Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:42:16.406Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c1cbfdce333ff01599f041"
+  },
+  "nameCompany": "Alimentos Prosalud",
+  "descriptionCompany": "Empresa guatemalteca especializada en la fabricación y distribución de productos alimenticios saludables como galletas, cereales y jugos.",
+  "addressCompany": "Ciudad de Guatemala, Guatemala",
+  "phoneCompany": "24356789",
+  "emailCompany": "ventas@prosalud.com.gt",
+  "impactLevel": "MEDIUM",
+  "yearFoundation": {
+    "$date": "2006-12-31T06:00:00.000Z"
+  },
+  "category": "Alimentos",
+  "trayectory": 19,
+  "createdAt": {
+    "$date": "2025-02-28T14:45:17.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T14:45:17.089Z"
+  }
+}]
